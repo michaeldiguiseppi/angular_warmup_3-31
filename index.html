@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>WarmUp!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cerulean/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container" style="padding: 50px;">
+      <form class="form form-horizontal">
+        <div class="row">
+          <div class="col-lg-3">
+            <input type="text" ng-model="firstName" class="form-control" placeholder="First Name" ng-init="firstName='Mike'"/>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-lg-3">
+            <input type="text" ng-model="lastName" class="form-control" placeholder="Last Name" ng-init="lastName='DiGuiseppi'"/>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-lg-3">
+            <select class="form-control" ng-model="greeting" ng-init="greeting='Hello'">
+              <option value="Hello">Hello</option>
+              <option value="Greetings">Greetings</option>
+              <option value="Salutations">Salutations</option>
+              <option value="Live Long and Prosper">Live Long and Prosper</option>
+            </select>
+          </div>
+        </div>
+      </form>
+      <div class="container">
+        <h3>{{ greeting }}, {{ firstName }} {{ lastName }}</h3>
+      </div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  </body>
+</html>
